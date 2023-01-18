@@ -13,7 +13,8 @@ The database will contain:
 * Patient Bloodtype  
  - A+  
  - A-  
- - B+
+ - B+  
+ - B-
 
 ## Future additions
 1. Patient address  
