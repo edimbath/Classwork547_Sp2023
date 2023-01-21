@@ -72,4 +72,14 @@ def LDL_output(LDL_value, LDL_analy):
     return
 
  
+#Total Cholesterol
+def total_input():
+    total_LDL = input("Enter the LDL result:")
+    total_LDL = int(total_LDL)
+    total_HDL = input("Enter the HDL result:")
+    total_HDL = int(total_HDL)
+    total_value = total_LDL + total_HDL
+    return total_value
+ 
+ 
 interface()
