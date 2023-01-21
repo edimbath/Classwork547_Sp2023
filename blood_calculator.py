@@ -11,6 +11,8 @@ def interface():
             keep_running = False
         elif choice == "1":
             HDL_driver()
+        elif choice == "2":
+            LDL_driver()
     print("Program ending")
     
 #HDL cholesterol levels    
@@ -44,8 +46,8 @@ def HDL_output(HDL_value, HDL_analy):
 #LDL cholesterol levels
 def LDL_driver():
     LDL_in = LDL_input()
-    LDL_analy = LDL_analysis(HDL_in)
-    
+    LDL_analy = LDL_analysis(LDL_in)
+    LDL_output(LDL_in, LDL_analy)
 
 
 def LDL_input():
@@ -65,7 +67,9 @@ def LDL_analysis(LDL_int):
         answer = "Very High"
     return answer
     
-
+def LDL_output(LDL_value, LDL_analy):
+    print("The LDL result of {} is considered {}".format(LDL_value, LDL_analy))
+    return
 
  
 interface()
