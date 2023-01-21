@@ -42,6 +42,12 @@ def HDL_output(HDL_value, HDL_analy):
  
 
 #LDL cholesterol levels
+def LDL_driver():
+    LDL_in = LDL_input()
+    LDL_analy = LDL_analysis(HDL_in)
+    
+
+
 def LDL_input():
     LDL_value = input("Enter the LDL result:")
     LDL_value = int(LDL_value)
