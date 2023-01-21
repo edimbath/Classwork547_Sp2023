@@ -79,7 +79,7 @@ def LDL_output(LDL_value, LDL_analy):
 def total_driver():
     total_in = total_input()
     total_analy = total_analysis(total_in)
-    
+    total_output(total_in, total_analy)
 
 def total_input():
     total_LDL = input("Enter the LDL result:")
@@ -97,6 +97,11 @@ def total_analysis(total_int):
     elif total_int >= 240:
         answer = "High"
     return answer
+ 
+def total_output(total_value, total_analy):
+    print("The total cholesterol result of {} is considered {}".format(total_value, total_analy))
+    return
+ 
  
  
 interface()
