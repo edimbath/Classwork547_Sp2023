@@ -80,6 +80,15 @@ def total_input():
     total_HDL = int(total_HDL)
     total_value = total_LDL + total_HDL
     return total_value
+    
+def total_analysis(total_int):
+    if total_int < 200:
+        answer = "Normal"
+    elif 200 <= total_int < 239:
+        answer = "Borderline High"
+    elif total_int >= 240:
+        answer = "High"
+    return answer
  
  
 interface()
