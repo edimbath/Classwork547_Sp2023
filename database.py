@@ -6,19 +6,15 @@ def create_patient_entry(first_name, last_name, patient_mrn, patient_age):
 
 
 def get_full_name(in_patient):
-    # first = in_patient["First Name"]
-    # last = in_patient["Last Name"]
-    # full_name = first + last
-    # print(full_name)
     return "{} {}".format(patient["First Name"], patient["Last Name"])
 
 
 def print_database(db):
     for patient in db.values():
-        print("MRN: {}, Full Name: {}, Age: {}"
-              .format(patient["MRN"],
-                      get_full_patient(patient),
-                      patient["Age"]))
+        print("MRN: {}, Full Name: {}, Age: {}".format
+              (patient["MRN"],
+               get_full_patient(patient),
+               patient["Age"]))
 
 
 def main_driver():
