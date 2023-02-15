@@ -19,7 +19,7 @@ def interface():
     print("Program ending")
 
 
-#HDL cholesterol levels    
+# HDL cholesterol levels
 def HDL_driver():
     HDL_in = HDL_input()
     HDL_analy = HDL_analysis(HDL_in)
@@ -30,8 +30,8 @@ def HDL_input():
     HDL_value = input("Enter the HDL result:")
     HDL_value = int(HDL_value)
     return HDL_value
-    
-    
+
+
 def HDL_analysis(HDL_int):
     if HDL_int >= 60:
         answer = "Normal"
@@ -47,7 +47,7 @@ def HDL_output(HDL_value, HDL_analy):
     return
 
 
-#LDL cholesterol levels
+# LDL cholesterol levels
 def LDL_driver():
     LDL_in = LDL_input()
     LDL_analy = LDL_analysis(LDL_in)
@@ -77,11 +77,12 @@ def LDL_output(LDL_value, LDL_analy):
     return
 
 
-#Total Cholesterol
+# Total Cholesterol
 def total_driver():
     total_in = total_input()
     total_analy = total_analysis(total_in)
     total_output(total_in, total_analy)
+
 
 def total_input():
     total_LDL = input("Enter the LDL result:")
@@ -90,7 +91,8 @@ def total_input():
     total_HDL = int(total_HDL)
     total_value = total_LDL + total_HDL
     return total_value
-    
+
+
 def total_analysis(total_int):
     if total_int < 200:
         answer = "Normal"
@@ -99,11 +101,13 @@ def total_analysis(total_int):
     elif total_int >= 240:
         answer = "High"
     return answer
- 
+
+
 def total_output(total_value, total_analy):
-    print("The total cholesterol result of {} is considered {}".format(total_value, total_analy))
+    print("The total cholesterol result of {} is considered {}"
+          .format(total_value, total_analy))
     return
- 
- 
+
+
 if __name__ == "__main__":
     interface()
